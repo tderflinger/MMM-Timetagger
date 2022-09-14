@@ -1,0 +1,16 @@
+{
+  "name": "MMM-Timetagger",
+  "version": "1.0.0",
+  "description": "Magic Mirror² module to display Timetagger hours worked.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Derflinger",
+  "license": "MIT",
+  "dependencies": {
+    "htm": "3.1.1",
+    "preact": "10.10.0",
+    "axios": "0.27.2"
+  },
+  "repository": "github:tderflinger/MMM-Timetagger"
+}

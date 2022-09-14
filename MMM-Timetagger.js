@@ -2,6 +2,8 @@ let currentDataTT = {};
 
 Module.register("MMM-Timetagger", {
   defaults: {
+    endpoint: null,
+    apiToken: null
   },
   start: function () {
     this.getData();
@@ -50,7 +52,7 @@ Module.register("MMM-Timetagger", {
           <p
             style="font-size: 6rem; color: ${diffColor}; padding: 0; margin: 0"
           >
-            ${sumDiff} : ${minDiff}
+            ${sumDiff}:${minDiff}
           </p>
         </div>
       </div>`;

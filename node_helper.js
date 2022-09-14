@@ -1,17 +1,15 @@
 const NodeHelper = require("node_helper");
 const axios = require("axios");
 
-const TIMETAGGER_ENDPOINT = "http://odroid:8080/timetagger/api/v2";
-
-const API_TOKEN =
-  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRkIiwiZXhwaXJlcyI6MzI1MDM3NDg0MDAsInNlZWQiOiJqdVRPbUQwX2FURSJ9.FUPd-GYo6YpzCUHPTcab-5DK3W2eOgZ022GJEkyYasM";
+let endpoint = "";
+let apiToken = "";
 
 const getRecords = async (startTime, endTime) => {
   try {
     const response = await axios({
       method: "get",
-      url: `${TIMETAGGER_ENDPOINT}/records?timerange=${startTime}-${endTime}`,
-      headers: { authtoken: API_TOKEN },
+      url: `${endpoint}/records?timerange=${startTime}-${endTime}`,
+      headers: { authtoken: apiToken },
     });
     return response?.data;
   } catch (error) {
@@ -48,6 +46,8 @@ module.exports = NodeHelper.create({
     const self = this;
     switch (notification) {
       case "GET_TIMETAGGER_DATA":
+        endpoint = payload?.endpoint;
+        apiToken = payload?.apiToken;
         const monday = getMondayOfCurrentWeek();
         monday.setHours(0);
         monday.setMinutes(0);

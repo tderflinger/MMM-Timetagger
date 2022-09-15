@@ -30,6 +30,18 @@ const calculateHoursWorked = (records) => {
   return { sumDiff, minDiff };
 };
 
+function getDayRecords(records) {
+  const now = new Date();
+  const today = new Date();
+  today.setFullYear(now.getFullYear());
+  today.setDate(now.getDate());
+  today.setMonth(now.getMonth());
+  today.setHours(0);
+  today.setMinutes(0);
+  
+  return records.filter((record) => record?.t2 > today.getTime() / 1000 ? record : null)
+}
+
 function getMondayOfCurrentWeek() {
   const today = new Date();
   const first = today.getDate() - today.getDay() + 1;
@@ -58,9 +70,13 @@ module.exports = NodeHelper.create({
         );
 
         if (response) {
-          const result = calculateHoursWorked(response?.records);
+          const weekResult = calculateHoursWorked(response?.records);
+          const dayRecords = getDayRecords(response?.records);
+          const dayResult = calculateHoursWorked(dayRecords);
           self.sendSocketNotification("UPDATE_TIMETAGGER_DATA", {
-            ...result
+            ...weekResult,
+            daySumDiff: dayResult?.sumDiff,
+            dayMinDiff: dayResult?.minDiff,
           });
         }
         break;

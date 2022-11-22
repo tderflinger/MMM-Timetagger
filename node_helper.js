@@ -73,10 +73,17 @@ module.exports = NodeHelper.create({
           const weekResult = calculateHoursWorked(response?.records);
           const dayRecords = getDayRecords(response?.records);
           const dayResult = calculateHoursWorked(dayRecords);
+          const lastRecord = dayRecords[dayRecords.length-1];
+          let workInProgress = false;
+          if (lastRecord.t1 === lastRecord.t2) {
+            workInProgress = true;
+          }
+        
           self.sendSocketNotification("UPDATE_TIMETAGGER_DATA", {
             ...weekResult,
             daySumDiff: dayResult?.sumDiff,
             dayMinDiff: dayResult?.minDiff,
+            workInProgress
           });
         }
         break;

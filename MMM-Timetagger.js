@@ -18,14 +18,15 @@ Module.register("MMM-Timetagger", {
     const { h, render } = preact;
     const html = htm.bind(h);
 
-    const TimetaggerWidget = ({ sumDiff, minDiff, daySumDiff, dayMinDiff }) => {
+    const TimetaggerWidget = ({ sumDiff, minDiff, daySumDiff, dayMinDiff, workInProgress }) => {
       const diffColor = sumDiff < 20 ? "red" : "white";
+      const clockColor = workInProgress ? "red" : "white";
 
       // taken from: https://iconduck.com/icons/88028/clock-time-four-outline, Apache License
       const ClockIcon = ({ size, paddingTop }) => {
         return html`<svg
           style="padding-top: ${paddingTop}px; width: ${size}px; height: ${size}px"
-          fill="white"
+          fill="${clockColor}"
           height="24"
           viewBox="0 0 24 24"
           width="24"
@@ -49,6 +50,7 @@ Module.register("MMM-Timetagger", {
           </p>
         </div>
         <div>
+          <p style="font-size: 1.2rem; color: white; padding: 0; margin: 0">Week</p>
           <p
             style="font-size: 4rem; color: ${diffColor}; padding: 0; margin: 0"
           >
@@ -71,6 +73,7 @@ Module.register("MMM-Timetagger", {
         minDiff=${currentDataTT?.minDiff}
         daySumDiff=${currentDataTT?.daySumDiff}
         dayMinDiff=${currentDataTT?.dayMinDiff}
+        workInProgress=${currentDataTT?.workInProgress}
       />`,
       divElement
     );

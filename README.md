@@ -17,7 +17,7 @@ This is an example of how Magic Mirror² Timetagger looks in my configuration:
 
 ![Magic Mirror² Timetagger exmaple screen](./doc/mmm-timetagger-screenshot-1.png)
 
-Work in progress view:
+Work in progress view when you are currently timetracking:
 
 ![Magic Mirror² Timetagger exmaple work in progress screen](./doc/mmm-timetagger-screenshot-2.png)
 

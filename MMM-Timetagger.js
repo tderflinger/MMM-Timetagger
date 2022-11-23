@@ -22,6 +22,10 @@ Module.register("MMM-Timetagger", {
       const diffColor = sumDiff < 20 ? "red" : "white";
       const clockColor = workInProgress ? "red" : "white";
 
+      const WIPIcon = ({ size, paddingTop }) => {
+        return html`<svg style="padding-top: ${paddingTop}px;" height="36" width="36"><circle cx="18" cy="18" r="18" stroke="black" stroke-width="1" fill="red" /></svg>`
+      };
+
       // taken from: https://iconduck.com/icons/88028/clock-time-four-outline, Apache License
       const ClockIcon = ({ size, paddingTop }) => {
         return html`<svg
@@ -42,15 +46,14 @@ Module.register("MMM-Timetagger", {
         <div
           style="display: flex; padding-top: 1rem; margin: 0; padding-bottom: 0"
         >
-          <${ClockIcon} size=${38} paddingTop=${10} />
+          <${workInProgress ? WIPIcon : ClockIcon} size=${38} paddingTop=${10} />
           <p
             style="font-size: 2rem; color: white; padding: 0; margin: 0; margin-left: 0.5rem"
           >
-            Working
+            Working Week
           </p>
         </div>
         <div>
-          <p style="font-size: 1.2rem; color: white; padding: 0; margin: 0">Week</p>
           <p
             style="font-size: 4rem; color: ${diffColor}; padding: 0; margin: 0"
           >

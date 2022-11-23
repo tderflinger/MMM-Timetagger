@@ -6,7 +6,7 @@ Timetagger is a time tracking application built by Almar Klein.
 Specifically, it displays the following data:
 - hours worked this week
 - hours worked today
-- currently work in progress
+- work in progress indicator (red circle)
 
 In order to use this module, you need to have a [`Timetagger`](https://timetagger.app) account. You can also self-host Timetagger
 as described in the Timetagger documentation.
@@ -15,7 +15,11 @@ as described in the Timetagger documentation.
 
 This is an example of how Magic Mirror² Timetagger looks in my configuration:
 
-![Magic Mirror² GConnect exmaple screen](./doc/screenshot-MMM-GConnect.png)
+![Magic Mirror² Timetagger exmaple screen](./doc/mmm-timetagger-screenshot-1.png)
+
+Work in progress view:
+
+![Magic Mirror² Timetagger exmaple work in progress screen](./doc/mmm-timetagger-screenshot-2.png)
 
 ## Installation
 

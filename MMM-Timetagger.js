@@ -69,13 +69,15 @@ Module.register("MMM-Timetagger", {
     };
 
     const divElement = document.createElement("div");
+    const minDiffPadded = Math.floor(currentDataTT?.minDiff).toString().padStart(2, '0');
+    const dayMinDiffPadded = Math.floor(currentDataTT?.dayMinDiff).toString().padStart(2, '0');
 
     render(
       html`<${TimetaggerWidget}
         sumDiff=${currentDataTT?.sumDiff}
-        minDiff=${currentDataTT?.minDiff}
+        minDiff=${minDiffPadded}
         daySumDiff=${currentDataTT?.daySumDiff}
-        dayMinDiff=${currentDataTT?.dayMinDiff}
+        dayMinDiff=${dayMinDiffPadded}
         workInProgress=${currentDataTT?.workInProgress}
       />`,
       divElement

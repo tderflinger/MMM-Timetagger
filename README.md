@@ -47,8 +47,8 @@ Finally, edit your configuration file under `config/config.js` with the followin
   module: "MMM-Timetagger",
   position: "top_left",
   config: {
-	  endpoint: "Your API Timetagger endpoint, like this: http://mymachine:8080/timetagger/api/v2",
-	  apiToken: "Your API Token from Timetagger",
+	  endpoint: "Your API TimeTagger endpoint, like this: http://mymachine:8080/timetagger/api/v2",
+	  apiToken: "Your API Token from TimeTagger",
 	  interval: 300000,  // data refresh interval in ms
   },
 },
@@ -58,9 +58,9 @@ Finally, edit your configuration file under `config/config.js` with the followin
 
 | **Option**        | **Description** |
 | --- | --- |
-| `interval`      | Interval between new fetch of data from Timetagger in ms |
-| `endpoint`      | Your API Timetagger endpoint, like this: http://mymachine:8080/timetagger/api/v2 |
-| `apiToken`      | Your API Token from Timetagger |
+| `interval`      | Interval between new fetch of data from TimeTagger in ms |
+| `endpoint`      | Your API TimeTagger endpoint, like this: http://mymachine:8080/timetagger/api/v2 |
+| `apiToken`      | Your API Token from TimeTagger |
 
 ## Testing
 

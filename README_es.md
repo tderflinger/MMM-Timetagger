@@ -58,9 +58,9 @@ Finalmente, edite su archivo de configuración en `config/config.js` con la sigu
 
 | **Opción** | **Descripción** |
 | --- | --- |
-| `interval`      | Intervalo entre la obtención de datos del Timetagger en ms. |
-| `endpoint`      | Tu punto final de la API Timetagger, como este: http://mymachine:8080/timetagger/api/v2 |
-| `apiToken`      | Tu token de la API de Timetagger |
+| `interval`      | Intervalo entre la obtención de datos del TimeTagger en ms. |
+| `endpoint`      | Tu punto final de la API TimeTagger, como este: http://mymachine:8080/timetagger/api/v2 |
+| `apiToken`      | Tu token de la API de TimeTagger |
 
 
 ## Pruebas

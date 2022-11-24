@@ -1,5 +1,7 @@
 # Magic Mirror² TimeTagger
 
+[Español](./README_es.md)
+
 This is a [`Magic Mirror²`](https://magicmirror.builders/) module that shows the latest hours tracked by [TimeTagger](https://timetagger.app).
 TimeTagger is a time tracking application built by Almar Klein.
 
@@ -53,6 +55,7 @@ Finally, edit your configuration file under `config/config.js` with the followin
 ```
 
 ## Config Options
+
 | **Option**        | **Description** |
 | --- | --- |
 | `interval`      | Interval between new fetch of data from Timetagger in ms |

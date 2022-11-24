@@ -1,25 +1,25 @@
-# Magic Mirror² Timetagger
+# Magic Mirror² TimeTagger
 
-This is a [`Magic Mirror²`](https://magicmirror.builders/) module that shows the latest hours tracked by [Timetagger](https://timetagger.app).
-Timetagger is a time tracking application built by Almar Klein.
+This is a [`Magic Mirror²`](https://magicmirror.builders/) module that shows the latest hours tracked by [TimeTagger](https://timetagger.app).
+TimeTagger is a time tracking application built by Almar Klein.
 
 Specifically, it displays the following data:
 - hours worked this week
 - hours worked today
 - work in progress indicator (red circle)
 
-In order to use this module, you need to have a [`Timetagger`](https://timetagger.app) account. You can also self-host Timetagger
-as described in the Timetagger documentation.
+In order to use this module, you need to have a [`TimeTagger`](https://timetagger.app) account. You can also self-host TimeTagger
+as described in the TimeTagger documentation.
 
 ## Preview Screenshot
 
-This is an example of how Magic Mirror² Timetagger looks in my configuration:
+This is an example of how Magic Mirror² TimeTagger looks in my configuration:
 
-![Magic Mirror² Timetagger exmaple screen](./doc/mmm-timetagger-screenshot-1.png)
+![Magic Mirror² TimeTagger exmaple screen](./doc/mmm-timetagger-screenshot-1.png)
 
 Work in progress view when you are currently timetracking:
 
-![Magic Mirror² Timetagger exmaple work in progress screen](./doc/mmm-timetagger-screenshot-2.png)
+![Magic Mirror² TimeTagger exmaple work in progress screen](./doc/mmm-timetagger-screenshot-2.png)
 
 ## Installation
 
@@ -61,7 +61,7 @@ Finally, edit your configuration file under `config/config.js` with the followin
 
 ## Testing
 
-I have tested the `Magic Mirror² Timetagger` module on an Raspberry Pi 3B with Raspberry OS
+I have tested the `Magic Mirror² TimeTagger` module on an Raspberry Pi 3B with Raspberry OS
 and Node 16.15.0 and `Magic Mirror²` version 2.19.0.
 
 ## Icons
@@ -70,7 +70,7 @@ The module uses the following icons from iconduck.com:
 
 - https://iconduck.com/icons/88028/clock-time-four-outline Apache License
 
-## References
+## Software Stack
 
 Magic Mirror²: https://magicmirror.builders
 
